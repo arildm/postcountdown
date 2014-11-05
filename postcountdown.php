@@ -38,6 +38,15 @@ function postcountdown_enqueue_scripts() {
 }
 add_action( 'wp_enqueue_scripts', 'postcountdown_enqueue_scripts' );
 
+/**
+ * Loads the textdomain for internationalization.
+ */
+function postcountdown_textdomain() {
+	load_plugin_textdomain( 'postcountdown', false, dirname( plugin_basename( __FILE__ ) ) . '/languages/' );
+	#load_plugin_textdomain( 'postcountdown', false, plugins_url( '/languages/', __FILE__ ) );
+}
+add_action( 'init', 'postcountdown_textdomain' );
+
 class Postcountdown_Widget extends WP_Widget {
 
 	/**
