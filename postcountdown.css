@@ -1,0 +1,14 @@
+/**
+ * Default styles for the Postcountdown plugin.
+ *
+ * @package Postcountdown
+ */
+
+.postcountdown {
+	text-align: center;
+}
+
+.postcountdown .count {
+	display: block;
+	font-size: 150%;
+}
